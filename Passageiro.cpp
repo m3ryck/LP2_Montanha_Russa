@@ -14,6 +14,7 @@
 Passageiro::Passageiro(int id, Carro *c) {
 	this->id = id;
 	this->carro = c;
+	printf("showww\n");
 }
 
 
