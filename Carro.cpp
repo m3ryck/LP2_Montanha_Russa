@@ -44,5 +44,6 @@ void Carro::run() {
 		esperaEsvaziar();
 
 		voltas++;
+
 	}
 }

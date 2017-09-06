@@ -16,6 +16,7 @@ Passageiro::Passageiro(int id, Carro *c) {
 	this->carro = c;
 }
 
+
 Passageiro::~Passageiro() {
 }
 
@@ -56,5 +57,6 @@ void Passageiro::run() {
 	}
 
 	// decrementa o numero de pessoas no parque
+	Parque::numPessoas -=1;
 }
 

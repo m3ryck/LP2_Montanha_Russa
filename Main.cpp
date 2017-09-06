@@ -13,18 +13,22 @@ int main() {
 	Passageiro *passageiros[10];
 
     for (int i = 0; i < 10; i++) {
-    	passageiros[i] = new Passageiro(i, &carro);
-    	parque.addPassageiro(passageiros[i]);
+    	passageiros[i] = new Passageiro(i, &carro); //inicia construtor de objetos passageiro
+    	parque.addPassageiro(passageiros[i]); // adiciona os passageiros ao parque
     }
 
-    thread tCarro(carro);
 
-    vector<thread> tPassageiros;
-    for (auto &p : parque.getPassageiros()) tPassageiros.push_back(thread(&Passageiro::run, p));
+    thread tCarro(carro); //inicia thead carro
+
+    vector<thread> tPassageiros; //inica um vector de thread de passageiros 
+    for (auto &p : parque.getPassageiros()){ //for ate tamanho do vector
+     tPassageiros.push_back(thread(&Passageiro::run, p)); //inicia a thread do passageiro e joga no final do vector tPassageiros
+    }
 
     tCarro.join();
-    for (auto &th : tPassageiros) th.join();
-
+    for (auto &th : tPassageiros){
+     th.join();
+}
     for (int i = 0; i < 10; i++) {
     	delete passageiros[i];
     }
