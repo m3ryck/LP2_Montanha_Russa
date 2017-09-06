@@ -11,10 +11,9 @@
 
 #define MAX_NUM_VOLTAS 50
 
-Passageiro::Passageiro(int id, Carro *c, Parque *p) {
+Passageiro::Passageiro(int id, Carro *c) {
 	this->id = id;
 	this->carro = c;
-	this->parque = p;
 }
 
 Passageiro::~Passageiro() {

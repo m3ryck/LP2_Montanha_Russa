@@ -9,12 +9,11 @@ using namespace std;
 
 int main() {
 	Parque parque;
-	Carro carro(&parque);
-
+	Carro carro;
 	Passageiro *passageiros[10];
 
     for (int i = 0; i < 10; i++) {
-    	passageiros[i] = new Passageiro(i, &carro, &parque);
+    	passageiros[i] = new Passageiro(i, &carro);
     	parque.addPassageiro(passageiros[i]);
     }
 

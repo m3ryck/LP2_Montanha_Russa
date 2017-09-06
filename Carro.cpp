@@ -11,8 +11,7 @@
 const int Carro::CAPACIDADE = 5;
 int Carro::numPassageiros = 0;
 
-Carro::Carro(Parque *p) {
-	this->parque = p;
+Carro::Carro() {
 	this->voltas = 0;
 }
 
