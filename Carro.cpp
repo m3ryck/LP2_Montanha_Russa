@@ -14,8 +14,7 @@ int Carro::numPassageiros = 0;
 Carro::Carro() {
 	this->voltas = 0;
 	//testea dasdasdasd
-	//asdasdasda
-	//asdasdasd
+
 }
 
 Carro::~Carro() {
