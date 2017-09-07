@@ -6,10 +6,7 @@
 #include "include/Passageiro.h"
 
 using namespace std;
-//asdasdasd
-//asdasdas
 
-//show maluco
 
 int main() {
 	Parque parque;
